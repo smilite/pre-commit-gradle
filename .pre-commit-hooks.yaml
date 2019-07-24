@@ -1,0 +1,11 @@
+- id: gradle-check
+  name: gradle-check
+  description: Run gradle check
+  entry: bin/gradle-check
+  language: script
+
+- id: gradle-build
+  name: gradle-build
+  description: Run gradle build
+  entry: bin/gradle-build
+  language: script

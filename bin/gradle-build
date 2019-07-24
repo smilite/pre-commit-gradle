@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+
+declare -a paths
+
+index=0
+
+for path_uniq in $(echo "${paths[*]}" | tr ' ' '\n' | sort -u); do
+  path_uniq="${path_uniq//__REPLACED__SPACE__/ }"
+
+  pushd "$path_uniq" > /dev/null
+  gradle build
+  popd > /dev/null
+done
+
+gradle check

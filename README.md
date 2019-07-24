@@ -1,2 +1,2 @@
 # pre-commit-gradle
-pre-commit for gradle
+precommit hooks for gradle
